@@ -1,0 +1,29 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16"]
+      fail-fast: false
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: apt-get update
+        run: sudo apt-get update -y
+      - name: set up node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install dependencies
+        run: ./scripts/install.sh
+      - name: run tests
+        run: ./scripts/test.sh

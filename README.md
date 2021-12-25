@@ -1,17 +1,14 @@
 # typescript-api-template
 
-A boilerplate Typescript API that uses express ... 
+A template for express APIs written in typescript.
 
-Features to add:
+## Usage
 
-- test framework
-- production builds
-- automatic docs
-
-## Usage 
-
-```sh
-npm install 
-npm run dev
-```
+1. Clone this repository.
+1. Replace all instances of `typescript-api-template` across the entire reposity with the namespace of your project.
+1. Replace `package.json` with relevant values for your project.
+1. Use [n](https://github.com/tj/n) for managing your node environment.
+1. Run `./scripts/install.sh`
+1. Run `./scripts/test.sh`
+1. You're all set! Make this readme whatever you want now. The future is yours!
 
