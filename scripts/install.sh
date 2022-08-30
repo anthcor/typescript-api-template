@@ -1,3 +1,3 @@
 #!/bin/sh -ex
 
-npm install .
+npm clean-install .
